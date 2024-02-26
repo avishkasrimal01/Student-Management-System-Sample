@@ -1,0 +1,241 @@
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: rgba(181, 132, 221, 0.411) !important;
+}
+
+dv {
+    border: 1px solid red;
+}
+
+#title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#tabledata {
+    padding-top: 70px;
+}
+
+#space {
+    padding-top: 30px;
+    height: 60px;
+}
+
+#searchfield {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(87, 22, 141, 0.781);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+#datainput {
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+#data {
+    border-radius: 15px;
+}
+
+.button {
+    height: 50px;
+    width: 150px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+    box-shadow: .5px .5px 150px purple;
+}
+
+.type1::after {
+    content: "Search";
+    height: 50px;
+    width: 150px;
+    background-color: purple;
+    color: #fff;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translateY(50px);
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.type1::before {
+    content: "Search";
+    height: 50px;
+    width: 150px;
+    background-color: #fff;
+    color: purple;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translateY(0px) scale(1.2);
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.type1:hover::after {
+    transform: translateY(0) scale(1.2);
+}
+
+.type1:hover::before {
+    transform: translateY(-50px) scale(0) rotate(120deg);
+}
+
+#cover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 200px;
+    width: 50%;
+}
+
+#img1 {
+    width: 200px;
+    border-radius: 50%;
+}
+
+#pdf {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+
+#pdf .button {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    background: none;
+    color: #0f1923;
+    cursor: pointer;
+    position: relative;
+    padding: 8px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 11px;
+    transition: all .15s ease;
+}
+
+#pdf .button::before,
+#pdf .button::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: calc(50% - 5px);
+    border: 1px solid #7D8082;
+    transition: all .15s ease;
+}
+
+#pdf .button::before {
+    top: 0;
+    border-bottom-width: 0;
+}
+
+#pdf .button::after {
+    bottom: 0;
+    border-top-width: 0;
+}
+
+#pdf .button:active,
+#pdf .button:focus {
+    outline: none;
+}
+
+#pdf .button:active::before,
+#pdf .button:active::after {
+    right: 3px;
+    left: 3px;
+}
+
+#pdf .button:active::before {
+    top: 3px;
+}
+
+#pdf .button:active::after {
+    bottom: 3px;
+}
+
+#pdf .button_lg {
+    position: relative;
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #0f1923;
+    overflow: hidden;
+    box-shadow: inset 0px 0px 0px 1px transparent;
+}
+
+#pdf .button_lg::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 2px;
+    background-color: #0f1923;
+}
+
+#pdf .button_lg::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 4px;
+    height: 4px;
+    background-color: #0f1923;
+    transition: all .2s ease;
+}
+
+#pdf .button_sl {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: -1px;
+    left: -8px;
+    width: 0;
+    background-color: #ff4655;
+    transform: skew(-15deg);
+    transition: all .2s ease;
+}
+
+#pdf .button_text {
+    position: relative;
+}
+
+#pdf .button:hover {
+    color: #0f1923;
+}
+
+#pdf .button:hover .button_sl {
+    width: calc(100% + 15px);
+}
+
+#pdf .button:hover .button_lg::after {
+    background-color: #fff;
+}

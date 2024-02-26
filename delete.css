@@ -1,0 +1,110 @@
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: rgba(181, 132, 221, 0.411) !important;
+}
+
+#space {
+    padding-top: 30px;
+    height: 60px;
+}
+
+#space2 {
+    height: 30px;
+}
+
+#deletefield {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#datainput {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#searchbtn {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#showdata {
+    padding: 0 50px;
+}
+
+#deletefield {
+    background-color: rgba(87, 22, 141, 0.781);
+    border-radius: 10px
+}
+
+.button {
+    height: 50px;
+    width: 150px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+    box-shadow: .5px .5px 150px purple;
+}
+
+.type1::after {
+    content: "Search";
+    height: 50px;
+    width: 150px;
+    background-color: purple;
+    color: #fff;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translateY(50px);
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.type1::before {
+    content: "Search";
+    height: 50px;
+    width: 150px;
+    background-color: #fff;
+    color: purple;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translateY(0px) scale(1.2);
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.type1:hover::after {
+    transform: translateY(0) scale(1.2);
+}
+
+.type1:hover::before {
+    transform: translateY(-50px) scale(0) rotate(120deg);
+}
+
+#input1,
+#input2 {
+    width: 200px;
+    border-radius: 10px;
+}
+
+#title {
+    display: flex;
+    justify-content: center;
+}

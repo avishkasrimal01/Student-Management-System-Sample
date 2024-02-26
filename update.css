@@ -1,0 +1,223 @@
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: rgba(181, 132, 221, 0.411) !important;
+}
+
+iv {
+    border: 1px solid red;
+}
+
+#space {
+    padding-top: 30px;
+    height: 60px;
+}
+
+#space2 {
+    height: 30px;
+}
+
+#updatefield {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.526);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 20px;
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+
+#search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(87, 22, 141, 0.781);
+    border-radius: 10px;
+    padding-bottom: 20px;
+}
+
+#inputs {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#input1,
+#input2 {
+    width: 200px;
+    border-radius: 10px;
+}
+
+#title {
+    display: flex;
+    justify-content: center;
+}
+
+#searchButton {
+    border-radius: 12px;
+    font-weight: bold;
+    background-color: purple;
+    border: 2px solid rgb(255, 255, 255);
+}
+
+#ID,
+#email,
+#fname,
+#lname,
+#city,
+#floatingSelect,
+#guardian {
+    border-radius: 10px;
+}
+
+#submit {
+    border-radius: 10px;
+    width: 150px;
+    transition: 0.3s ease;
+}
+
+#clear {
+    border-radius: 10px;
+    width: 150px;
+    transition: 0.2s ease;
+}
+
+#clear:hover {
+    transform: translateY(-10px);
+}
+
+#submit:hover {
+    transform: translateY(-10px);
+}
+
+#flexCheckDefault {
+    border-radius: 50%;
+}
+
+
+.button {
+    height: 50px;
+    width: 150px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+    box-shadow: .5px .5px 150px purple;
+}
+
+.type1::after {
+    content: "Search";
+    height: 50px;
+    width: 150px;
+    background-color: purple;
+    color: #fff;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translateY(50px);
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.type1::before {
+    content: "Click to";
+    height: 50px;
+    width: 150px;
+    background-color: #fff;
+    color: purple;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translateY(0px) scale(1.2);
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.type1:hover::after {
+    transform: translateY(0) scale(1.2);
+}
+
+.type1:hover::before {
+    transform: translateY(-50px) scale(0) rotate(120deg);
+}
+
+.button-gro {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+button {
+    margin-left: 15px !important;
+    width: 150px !important;
+}
+
+
+#btn2 .button {
+    height: 50px;
+    width: 200px;
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+    border: 2px solid purple;
+    overflow: hidden;
+    border-radius: 30px;
+    color: purple;
+    transition: all 1s ease-in-out;
+}
+
+#btn2 .btn-txt {
+    z-index: 1;
+    font-weight: 800;
+    letter-spacing: 4px;
+}
+
+#btn2 .type1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.5s ease-in-out;
+    background-color: purple;
+    border-radius: 30px;
+    visibility: hidden;
+    height: 10px;
+    width: 10px;
+    z-index: -1;
+}
+
+#btn2 .button:hover {
+    box-shadow: 1px 1px 200px purple;
+    color: #fff;
+    border: none;
+}
+
+#btn2 .type1:hover::after {
+    visibility: visible;
+    transform: scale(100) translateX(2px);
+}

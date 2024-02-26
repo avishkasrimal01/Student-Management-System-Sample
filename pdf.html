@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<head>
+  <script crossorigin src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
+  <script crossorigin src="https://unpkg.com/jspdf-autotable@3.6.0/dist/jspdf.plugin.autotable.js"></script>
+</head>
+
+<style>
+  #back .button {
+    height: 50px;
+    width: 200px;
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+    border: 2px solid purple;
+    overflow: hidden;
+    border-radius: 30px;
+    color: purple;
+    transition: all 1s ease-in-out;
+  }
+
+  #back .btn-txt {
+    z-index: 1;
+    font-weight: 800;
+    letter-spacing: 4px;
+  }
+
+  #back .type1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.5s ease-in-out;
+    background-color: purple;
+    border-radius: 30px;
+    visibility: hidden;
+    height: 10px;
+    width: 10px;
+    z-index: -1;
+  }
+
+  #back .button:hover {
+    box-shadow: 1px 1px 200px purple;
+    color: #fff;
+    border: none;
+  }
+
+  #back .type1:hover::after {
+    visibility: visible;
+    transform: scale(100) translateX(2px);
+  }
+</style>
+
+<body>
+  <table class="table pure-table" id="basic-table" style="display: block;">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">City</th>
+        <th scope="col">Guardian Name</th>
+        <th scope="col">Subject</th>
+        <th scope="col">Course</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Nipun</td>
+        <td>Rasanjana</td>
+        <td>anrdspro@gmail.com</td>
+        <td>Galle</td>
+        <td>Manoja</td>
+        <td>OOP,ETF</td>
+        <td>HND</td>
+      </tr>
+      <tr style="background: rgb(155, 89, 182); color: white;">
+        <td>2</td>
+        <td>Pasindi</td>
+        <td>Uthwari</td>
+        <td>uthwarinpn@gmail.com</td>
+        <td>Galle</td>
+        <td>Sudeera</td>
+        <td>OOP,ETF,WAD</td>
+        <td>HND</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Chamika</td>
+        <td>Supunsara</td>
+        <td>chakiya@gmail.com</td>
+        <td>Panadura</td>
+        <td>Nama Mathaka na</td>
+        <td>OOP,ETF,WAD,DBMS</td>
+        <td>HND</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div>
+    <a href="search.html"><button id="back" class="button">Back</button></a>
+  </div>
+
+
+  <embed id="output" type="application/pdf" style="width:500px;height:800px;" />
+
+  <script>
+    const doc = new window.jspdf.jsPDF();
+
+
+    // From HTML
+    doc.autoTable({ html: '.table' })
+    // document.getElementById("output").src = doc.output('datauri');
+    doc.save("ss.pdf");
+
+  </script>
+
+</body>
+
+</html>
